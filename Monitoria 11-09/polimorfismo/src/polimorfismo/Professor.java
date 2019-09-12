@@ -1,0 +1,29 @@
+package polimorfismo;
+
+public class Professor extends Pessoa {
+
+	private double salario;
+
+	public Professor(String nome, int idade, double salario) {
+		super(nome, idade);
+		this.salario = salario;
+	}
+
+	@Override
+	public void falar(String msg) {
+		System.out.println("Cordial :"+msg);
+	}
+	
+	public void falar(String titulo, String msg ) {
+		System.out.println("\t----"+titulo+"\n"+msg);
+	}
+	
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+}
