@@ -6,8 +6,8 @@ public class Ajuda extends PanelGenerico{
 
 	private JButton btnVoltar;
 	
-	public Ajuda(String titulo) {
-		super(titulo);
+	public Ajuda(int largura, int altura, String titulo) {
+		super(largura, altura, titulo);
 		
 		btnVoltar = new JButton("Voltar");
 		add(btnVoltar);
@@ -17,5 +17,4 @@ public class Ajuda extends PanelGenerico{
 		return btnVoltar;
 	}
 
-	
 }

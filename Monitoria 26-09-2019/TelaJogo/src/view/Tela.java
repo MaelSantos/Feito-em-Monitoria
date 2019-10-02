@@ -3,44 +3,38 @@ package view;
 public class Tela extends TelaGenerica{
 
 	private Menu menu;
-	private Fase fase;
 	private Ajuda ajuda;
+	private Fase fase;
 	
-	public Tela(String titulo) {
-		super(titulo);
-		init();
-		setVisible(true);
-	}
-
-	public Tela(String titulo, int largura, int altura) {
-		super(titulo, largura, altura);
-		init();
-		setVisible(true);
-	}
-
-	public void init() {
-		menu = new Menu("Menu");
-		fase = new Fase("Fase");
-		ajuda = new Ajuda("Ajuda");
+	public Tela(int largura, int altura) {
+		super(largura, altura);
 		
-		//ligando a string ao componente
+		menu = new Menu(getWidth(), getHeight(), "Menu");
+		ajuda = new Ajuda(getWidth(), getHeight(), "Ajuda");
+		fase = new Fase(getWidth(), getHeight(), "Fase");
+		
 		add(menu, "m");
-		add(fase, "f");
 		add(ajuda, "a");
+		add(fase, "f");
+		
+		menu.setVisible(true);
+		setVisible(true);
 		
 		mudarTela("m");
+//		getCardLayout().show(getContentPane(), "m");
+		
 	}
-	
+
 	public Menu getMenu() {
 		return menu;
+	}
+
+	public Ajuda getAjuda() {
+		return ajuda;
 	}
 
 	public Fase getFase() {
 		return fase;
 	}
 
-	public Ajuda getAjuda() {
-		return ajuda;
-	}
-	
 }

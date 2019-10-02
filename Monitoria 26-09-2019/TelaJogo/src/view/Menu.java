@@ -4,24 +4,23 @@ import javax.swing.JButton;
 
 public class Menu extends PanelGenerico{
 
-	private JButton btnIniciar, btnAjuda, btnSair;
+	private JButton btnFase, btnAjuda, btnSair;
 	
-	public Menu(String titulo) {
-		super(titulo);
+	public Menu(int largura, int altura, String titulo) {
+		super(largura, altura, titulo);
 		
-		btnIniciar = new JButton("Iniciar");
-		btnAjuda = new JButton("Ajuda"); 
-		btnSair = new JButton("Sair");
+		btnFase = new JButton("Fase"); 
+		btnAjuda = new JButton("Ajuda");
+		btnSair = new JButton("Sair");;
 		
-		add(btnIniciar);
+		add(btnFase);
 		add(btnAjuda);
 		add(btnSair);
 		
-		setVisible(true);
 	}
 
-	public JButton getBtnIniciar() {
-		return btnIniciar;
+	public JButton getBtnFase() {
+		return btnFase;
 	}
 
 	public JButton getBtnAjuda() {
