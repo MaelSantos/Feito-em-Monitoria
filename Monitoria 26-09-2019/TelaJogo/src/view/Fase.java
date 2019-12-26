@@ -6,8 +6,8 @@ public class Fase extends PanelGenerico{
 
 	private JButton btnVoltar;
 	
-	public Fase(String titulo) {
-		super(titulo);
+	public Fase(int largura, int altura, String titulo) {
+		super(largura, altura, titulo);
 		
 		btnVoltar = new JButton("Voltar");
 		add(btnVoltar);
