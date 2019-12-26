@@ -7,8 +7,8 @@ import javax.swing.JFrame;
 
 public abstract class TelaGenerica extends JFrame{
 
-	public static final int LARGURA = 270;
-	public static final int ALTURA = 130;
+	public static final int LARGURA = 800;
+	public static final int ALTURA = 500;
 	
 	private CardLayout cardLayout;
 	
